@@ -1,4 +1,5 @@
-Финальный проект Спринт 5 (автотесты для сервиса Stellar Burgers)
+Финальный проект Спринт 5 (автотесты для сервиса "Stellar Burgers")
+https://stellarburgers.nomoreparties.site
 1. Основа для написания авто тестов — фреймворк pytest.
 2. Установить зависимости — pip install -r requirements.txt.
 3. Команда для запуска — pytest -v. 
