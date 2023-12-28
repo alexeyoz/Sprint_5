@@ -5,8 +5,8 @@ class Locators:
     # поля страницы
     LOGIN_FIELD = (By.XPATH, ".//*[@name='name']")  # поле ввода логина
     PASSWORD_FILED = (By.XPATH, ".//*[@name='Пароль']")  # поле ввода пароля
-    NAME_REGISTRATION = (By.XPATH, ".//fieldset[1]/*/*/*[@name='name']")  # имя при регистрации
-    EMAIL_REGISTRATION = (By.XPATH, ".//fieldset[2]/*/*/*[@name='name']")  # email при регистрации
+    NAME_REGISTRATION = (By.XPATH, "//label[text()='Имя']/following-sibling::*")  # имя при регистрации
+    EMAIL_REGISTRATION = (By.XPATH, "//label[text()='Email']/following-sibling::*")  # email при регистрации
     PASSWORD_REGISTRATION = (By.XPATH, ".//*[@name='Пароль']")  # пароль при регистрации
 
     # кнопки страницы
@@ -21,12 +21,11 @@ class Locators:
     LOGGING_AFTER_EXITING = (By.XPATH, ".//form/button")  # кнопка войти
     CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']")  # кнопка "Конструктор"
     LOGO = (By.XPATH, ".//div[@class='AppHeader_header__logo__2D0X2']")  # кнопка "Логотип"
-    SAUCES_BUTTON = (By.XPATH, ".//span[@class='text text_type_main-default' and text()='Соусы']")  # кнопка "Соусы"
-    BUNS_BUTTON = (By.XPATH, ".//span[@class='text text_type_main-default' and text()='Булки']")  # кнопка"Булки"
-    TOPPINGS_BUTTON = (By.XPATH, ".//span[@class='text text_type_main-default' and text()='Начинки']")  # кн."Начинки"
-    SWITCHING_TO_SAUCES = (By.XPATH, ".//h2[text()='Соусы']")  # переход "Соусы"
-    SWITCHING_TO_BUNS = (By.XPATH, ".//h2[text()='Булки']")  # переход "Булки"
-    SWITCHING_TO_TOPPINGS = (By.XPATH, ".//h2[text()='Начинки']")  # переход "Начинки"
+
+    SAUCES_BUTTON = (By.XPATH, "//span[text()='Соусы']/parent::*")  # кнопка "Соусы"
+    BUNS_BUTTON = (By.XPATH, "//span[text()='Булки']/parent::*")  # кнопка"Булки"
+    TOPPINGS_BUTTON = (By.XPATH, "//span[text()='Начинки']/parent::*")  # кн."Начинки"
 
     # ошибки
     INCORRECT_PASSWORD = (By.XPATH, ".//p[contains(text(),'Некорректный пароль')]")  # ошибка при вводе пароля
+
